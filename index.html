@@ -113,6 +113,7 @@
 
         /* Global Modifiers */
         body {
+
             font-family: 'Fira Sans', sans-serif;
             margin: 0;
             padding: 0;
@@ -122,11 +123,25 @@
         }
 
         header {
+            padding: 0 !important;
             /* Applies to light gray header atop page */
             background-color: #333;
             font-weight:800;
             padding: 1px;
             text-align: center;
+            max-height: 100px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        header img {
+
+            max-height: 50px;
+            margin-right: 10px;
+        }
+        header h2 {
+            max-height: 50px;
         }
 
         section {
@@ -406,6 +421,7 @@
 <body>
 
 <header>
+    <img src="squareLogo.png">
     <h1 onclick="window.location = window.location" class="hover-underline-animation">Catphish<span class="name">Intelligence</span></h1>
 </header>
 
@@ -568,7 +584,7 @@
                 <input type="checkbox" id="state1" hidden>
                 <div class="content">
                     <div class="inner">
-                        I use state of the art operational security measures. The sites are set up in compartmentalized clean operating environments using burner emails, privacy cards, and absolutely no information that could be traced back to me. Furthermore, I ensure that the sites look so believable that the targets don't realize it's a front to begin with.
+                        We use state of the art operational security measures. The sites are set up in compartmentalized clean operating environments using burner emails, privacy cards, and absolutely no information that could be traced back to me. Furthermore, we ensure that the sites look so believable that the targets don't realize it's a front to begin with.
                     </div>
                 </div>
             </div>
