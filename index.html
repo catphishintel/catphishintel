@@ -5,6 +5,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script type='text/javascript'>document.addEventListener('DOMContentLoaded', function () {window.setTimeout(document.querySelector('svg').classList.add('animated'),1000);})</script>
+
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -278,6 +302,9 @@
     </style>
     <style>
         /* styles for accordians used in FAQ section */
+        .accordianEach {
+            padding-bottom: 10px;
+        }
         .accordianDiv .button {
             background: #ffffff;
             cursor: pointer;
@@ -302,12 +329,22 @@
             overflow: hidden;
             box-sizing: border-box;
         }
-        .accordianDiv #state:checked ~ .content {
+        .accordianDiv #state1:checked ~ .content,
+        .accordianDiv #state2:checked ~ .content,
+        .accordianDiv #state3:checked ~ .content,
+        .accordianDiv #state4:checked ~ .content,
+        .accordianDiv #state5:checked ~ .content,
+        .accordianDiv #state6:checked ~ .content,
+        .accordianDiv #state7:checked ~ .content,
+        .accordianDiv #state8:checked ~ .content {
             max-height: 500px;
         }
         .accordianDiv .inner {
             margin: 16px;
         }
+    </style>
+    <style>
+
     </style>
     <style>
         /* styles for reach out button */
@@ -319,6 +356,11 @@
             cursor: pointer;
             outline-offset: 4px;
             margin: auto;
+        }
+        .pushable:hover{
+            box-shadow: 5px 5px 20px #6d6b6b6b;
+            transform: scale3d(1.1, 1.1, 1.1);
+            transition: box-shadow 1s, transform .5s;
         }
         .front {
             display: block;
@@ -340,6 +382,24 @@
             width: 100%;
             margin: 1em 0 1em 0;
             justify-content: center;
+        }
+
+        .floatingbuttonContainer {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin: 1em 0 1em 0;
+            justify-content: center;
+            z-index: 2;
+        }
+        .bottomVignent {
+            background: linear-gradient( rgba(0, 0, 0, 0), #000 100%);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 200px;
+            z-index: 1;
         }
     </style>
 </head>
@@ -502,13 +562,90 @@
         </h2>
         <div class="accordianDiv">
             <div class="accordianEach">
-                <label for="state">
+                <label for="state1">
                     <div class="button">How do you ensure the target can't track this back to me?</div>
                 </label>
-                <input type="checkbox" id="state" hidden>
+                <input type="checkbox" id="state1" hidden>
                 <div class="content">
                     <div class="inner">
                         I use state of the art operational security measures. The sites are set up in compartmentalized clean operating environments using burner emails, privacy cards, and absolutely no information that could be traced back to me. Furthermore, I ensure that the sites look so believable that the targets don't realize it's a front to begin with.
+                    </div>
+                </div>
+            </div>
+            <div class="accordianEach">
+                <label for="state2">
+                    <div class="button">What is Catphish Intelligence?</div>
+                </label>
+                <input type="checkbox" id="state2" hidden>
+                <div class="content">
+                    <div class="inner">
+                    Catphish Intelligence is a cutting-edge intelligence service and product that leverages advanced techniques such as OSINT (Open Source Intelligence), social engineering threats, and honey pots to ensure the succesful capture of intelligence.
+                    </div>
+                </div>
+            </div>
+            <div class="accordianEach">
+                <label for="state3">
+                    <div class="button">How does Catphish Intelligence utilize technology in investigations?</div>
+                </label>
+                <input type="checkbox" id="state3" hidden>
+                <div class="content">
+                    <div class="inner">
+                        Catphish Intelligence harnesses state-of-the-art technology to conduct investigations, utilizing advanced tools and methodologies to gather intelligence effectively.
+                    </div>
+                </div>
+            </div>
+            <div class="accordianEach">
+                <label for="state4">
+                    <div class="button">What is the significance of OSINT in Catphish Intelligence's approach?</div>
+                </label>
+                <input type="checkbox" id="state4" hidden>
+                <div class="content">
+                    <div class="inner">
+                        OSINT, or Open Source Intelligence, is a critical component of Catphish Intelligence's methodology. It involves gathering information from publicly available sources, utilizing technology and investigator expertise to enhance the overall intelligence and investigation processes.
+                    </div>
+                </div>
+            </div>
+            <div class="accordianEach">
+                <label for="state5">
+                    <div class="button">How does Catphish Intelligence stay at the forefront of technology trends?</div>
+                </label>
+                <input type="checkbox" id="state5" hidden>
+                <div class="content">
+                    <div class="inner">
+                        Catphish Intelligence prioritizes staying ahead of technology trends by continually updating tools and methodologies. This ensures that investigators remain well-equipped to handle evolving threats and challenges in the intelligence and investigation landscape.
+                    </div>
+                </div>
+            </div>
+            <div class="accordianEach">
+                <label for="state6">
+                    <div class="button">Can individuals or businesses benefit from Catphish Intelligence's services?</div>
+                </label>
+                <input type="checkbox" id="state6" hidden>
+                <div class="content">
+                    <div class="inner">
+                        Absolutely. Catphish Intelligence offers services tailored for both individuals and businesses, providing comprehensive intelligence and investigative solutions utilizing advanced technology and a team of skilled investigators.
+                    </div>
+                </div>
+            </div>
+            <div class="accordianEach">
+                <label for="state7">
+                    <div class="button">What makes Catphish Intelligence a leader in the intelligence industry?</div>
+                </label>
+                <input type="checkbox" id="state7" hidden>
+                <div class="content">
+                    <div class="inner">
+                        Catphish Intelligence stands out as a leader due to its commitment to leveraging cutting-edge technology, experienced investigators, and it's ability to leverage the expertise of a program manager for an existing cutting-edge intelligence program. This combination ensures optimal results in intelligence and investigation services.
+                    </div>
+                </div>
+            </div>
+            <div class="accordianEach">
+                <label for="state8">
+                    <div class="button">What are your values and principles?</div>
+                </label>
+                <input type="checkbox" id="state8" hidden>
+                <div class="content">
+                    <div class="inner">
+                        The founder of catphish intelligence has a strong commitment to upholding his personal principles and applies that to all areas of his life, including the way he runs his intelligence teams and programs. Those core values are: Honesty, Integrity, Transparency, and Generosity.
                     </div>
                 </div>
             </div>
@@ -544,5 +681,40 @@
 <footer>
     <a href="https://storyset.com/web">Web illustrations by Storyset</a>
 </footer>
+<div class="floatingbuttonContainer">
+    <button class="pushable" onclick="openForm()">
+  <span class="front">
+    Reach out
+  </span>
+    </button>
+</div>
+<div class="bottomVignent">
+</div>
+<script>
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    const CheckOutA = document.getElementsByClassName("buttonContainer")[0];
+    const CheckOutB = document.getElementsByClassName("floatingbuttonContainer")[0];
+    const bottomVignent = document.getElementsByClassName("bottomVignent")[0];
+    document.addEventListener('scroll', function() {
+        let inViewport = isInViewport(CheckOutA);
+        if(inViewport){
+            /*When static button is visible*/
+            CheckOutB.style.display = "none";
+            bottomVignent.style.display = "none";
+        } else {
+            CheckOutB.style.display = "flex";
+            bottomVignent.style.display = "flex";
+        }
+    });
+</script>
 </body>
 </html>
